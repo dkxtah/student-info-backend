@@ -1,7 +1,7 @@
 import { students } from "../config/database.js";
 import { getStudentMissingFields } from "../utils/helper.js";
 
-export const validateStudent = (req, res, next) => {
+export const validateFields = (req, res, next) => {
   const missingFields = getStudentMissingFields(req.body);
 
   if (missingFields) {
